@@ -7,7 +7,7 @@ const Highlight = ({ icon, title, para }) => {
                 {icon}
             </div>
             <h3 className="highlight__subtitle">{title}</h3>
-            <p className="hightlight__para">{para}</p>
+            <p className="hightlight__para hightlight__para--row">{para}</p>
         </div>
     )
 }

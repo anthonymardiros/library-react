@@ -103,6 +103,7 @@ button:active {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .nav__link {
@@ -168,7 +169,7 @@ button:active {
 }
 
 .menu__backdrop {
-  position: absolute;
+  position: fixed;
   background-color: #242424;
   top: 0;
   left: 0;
@@ -246,6 +247,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow-x: hidden;
 }
 
 .header__description {
@@ -269,10 +271,12 @@ header {
 
 .container {
   padding: 56px 0;
+  overflow-x: hidden;
 }
 
 .books__container {
   padding: 24px 50px;
+  overflow-x: hidden;
 }
 
 .row {
@@ -307,7 +311,7 @@ HIGHLIGHTS
   background: url("./assets/wave.svg");
   content: "";
   position: absolute;
-  width: 101vw;
+  width: 100vw;
   height: 12vw;
   left: 0;
   z-index: 1;
@@ -466,6 +470,7 @@ EXPLORE
 
 .container__explore {
   margin-top: -50px;
+  overflow-x: hidden;
 }
 
 /* 
@@ -491,6 +496,7 @@ footer {
 
 .footer__container {
   padding: 30px 0;
+  overflow-x: hidden;
 }
 
 .footer__link,
@@ -595,6 +601,7 @@ select {
 
 .container__book--selected {
   padding-top: 16px;
+  overflow-x: hidden;
 }
 
 .book__selected {
@@ -800,6 +807,7 @@ select {
 @media (max-width: 905px) {
   .book__selected--description {
     width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -854,10 +862,15 @@ select {
 
   .container__explore {
     margin-top: -100px;
+    overflow-x: hidden;
   }
 
   .row {
-    padding: 0 20px;
+    padding: 0 10px;
+  }
+
+  .hightlight__para--row {
+    text-align: center;
   }
 
   .btn__menu {
