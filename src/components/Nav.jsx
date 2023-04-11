@@ -10,6 +10,9 @@ const Nav = ({ numberOfItems }) => {
     function closeMenu(){
         document.body.classList.remove('menu--open')
     }
+    function handleLinkClick() {
+        closeMenu();
+    }
     return(
         <div className='nav__container'>
             <Link to='/'>
@@ -17,12 +20,12 @@ const Nav = ({ numberOfItems }) => {
             </Link>
             <ul className="nav__links">
                 <li className="nav__list">
-                    <Link to="/" className="nav__link">
+                    <Link to="/" className="nav__link" onClick={handleLinkClick}>
                         Home
                     </Link>
                 </li>
                 <li className="nav__list">
-                    <Link to="/books" className="nav__link">
+                    <Link to="/books" className="nav__link" onClick={handleLinkClick}>
                         Books
                     </Link>
                 </li>
@@ -30,7 +33,7 @@ const Nav = ({ numberOfItems }) => {
                     <FontAwesomeIcon icon='bars'/>
                 </button>
                 <li className="nav__icon">
-                    <Link to="/cart" className='nav__link'>
+                    <Link to="/cart" className='nav__link' onClick={handleLinkClick}>
                         <FontAwesomeIcon icon='shopping-cart'/>
                     </Link>
                     {
@@ -44,17 +47,17 @@ const Nav = ({ numberOfItems }) => {
                 </button>
                 <ul className="menu__links">
                     <li className="menu__list">
-                        <Link to="/" className="menu__link">
+                        <Link to="/" className="menu__link" onClick={handleLinkClick}>
                             Home
                         </Link>
                     </li>
                     <li className="menu__list">
-                        <Link to="/books" className="menu__link">
+                        <Link to="/books" className="menu__link" onClick={handleLinkClick}>
                             Books
                         </Link>
                     </li>
                     <li className="menu__list">
-                        <Link to="/cart" className="menu__link">
+                        <Link to="/cart" className="menu__link" onClick={handleLinkClick}>
                             Cart
                         </Link>
                     </li>

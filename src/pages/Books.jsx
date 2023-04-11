@@ -27,10 +27,14 @@ const Books = ({ books: initialBooks }) => {
           )
       );
     }
-    if (filter === "Rating") {
-      setBooks(books.slice().sort((a, b) => b.Rating - a.Rating));
+    if (filter === "RATING_LOW_TO_HIGH") {
+        setBooks(books.slice().sort((a, b) => a.rating - b.rating));
+      }
+    if (filter === "RATING_HIGH_TO_LOW") {
+      setBooks(books.slice().sort((a, b) => b.rating - a.rating));
     }
   }
+
   return (
     <div id="books__body">
       <div id="books__main">
@@ -50,8 +54,9 @@ const Books = ({ books: initialBooks }) => {
                     Sort
                   </option>
                   <option value="LOW_TO_HIGH">Price, Low to High</option>
-                  <option value="HIGH_TO_LOW">Price. High to Low</option>
-                  <option value="RATING">Rating</option>
+                  <option value="HIGH_TO_LOW">Price, High to Low</option>
+                  <option value="RATING_LOW_TO_HIGH">Rating, Low to High</option>
+                  <option value="RATING_HIGH_TO_LOW">Rating, High to Low</option>
                 </select>
               </div>
             </div>

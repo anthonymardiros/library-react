@@ -92,12 +92,13 @@ button:active {
 
 .logo {
   width: 160px;
+  transform: translateY(5px);
 }
 
 .nav__container {
   width: 100%;
   max-width: 1200px;
-  padding: 0 24px;
+  padding: 7px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -228,6 +229,11 @@ LANDING
   background-color: rgba(115, 66, 214, 0.1)
 }
 
+.landing {
+    display: flex;
+    transform: translateY(10px);
+}
+
 header {
   height: calc(100vh - 80px);
 }
@@ -246,6 +252,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(5px);
 }
 
 .header__img--wrapper {
@@ -265,7 +272,7 @@ header {
 }
 
 .books__container {
-  padding: 24px 0;
+  padding: 24px 50px;
 }
 
 .row {
@@ -457,6 +464,10 @@ EXPLORE
   background-color: rgba(115, 66, 214, 0.1);
 }
 
+.container__explore {
+  margin-top: -50px;
+}
+
 /* 
 
 FOOTER
@@ -469,11 +480,17 @@ footer {
 
 .footer__logo {
   display: flex;
+  padding-bottom: 10px;
 }
 
 .footer__logo--img {
   width: 160px;
   filter: grayscale(1) invert(1);
+  transform: translateY(13px);
+}
+
+.footer__container {
+  padding: 30px 0;
 }
 
 .footer__link,
@@ -481,8 +498,12 @@ footer {
   color: #fff;
 }
 
+.footer__copyright {
+    transform: translateY(-12px);
+}
+
 .footer__list {
-  margin: 20px 0 24px 0;
+  margin: 20px 0 34px 0;
 }
 
 .footer__link {
@@ -528,9 +549,18 @@ select {
   height: 40px;
   line-height: 40px;
   outline: none;
-  padding: 0 16px;
+  padding: 0 14px;
   width: 100%;
   max-width: 200px;
+}
+
+#filter {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0px center;
+  padding-right: 30px;
 }
 
 .books__loading {
@@ -804,6 +834,26 @@ select {
 
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
+  .landing {
+    font-size: 28px;
+  }
+
+  .header__description {
+    transform: translateY(10px);
+  }
+
+  .books__header--title {
+    margin-right: 24px;
+  }
+
+  .container__explore {
+    margin-top: -100px;
+  }
+
+  .row {
+    padding: 0 20px;
+  }
+
   .btn__menu {
     display: block;
   }

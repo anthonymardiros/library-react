@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Explore = () => {
     return(
         <section id="id">
-            <div className="container">
+            <div className="container container__explore">
                 <div className="row row__column">
                     <h2>
                         Explore more <span className="purple">Books</span>
