@@ -854,6 +854,7 @@ select {
 
   .header__description {
     transform: translateY(10px);
+    padding: 0 15px;
   }
 
   .books__header--title {
