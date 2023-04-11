@@ -798,13 +798,6 @@ select {
 }
 
 @media (max-width: 905px) {
-  .book__selected {
-    flex-direction: column;
-  }
-  .book__selected--figure {
-    width: 100%;
-    justify-content: flex-start;
-  }
   .book__selected--description {
     width: 100%;
   }
