@@ -797,10 +797,23 @@ select {
   padding: 12px 0;
 }
 
+@media (max-width: 905px) {
+  .book__selected {
+    flex-direction: column;
+  }
+  .book__selected--figure {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .book__selected--description {
+    width: 100%;
+  }
+}
+
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
-  .header__description {
-    padding: 0 24px;
+  .book__selected--title {
+    text-align: left;
   }
 
   h1 {
