@@ -247,7 +247,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  overflow-x: hidden;
 }
 
 .header__description {
