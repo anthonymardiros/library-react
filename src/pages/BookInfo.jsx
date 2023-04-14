@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Book from "../components/ui/Book";
 import Price from "../components/ui/Price";
 import Rating from "../components/ui/Rating";
+import { animateScroll as scroll } from 'react-scroll';
 
 //Use the git add command to stage the changes to your files. For example, git add . will stage all changes in the current directory.
 //Use the git commit command to create a commit with a message describing the changes. For example, git commit -m "updated files"
@@ -19,6 +20,10 @@ const BookInfo = ({ books, addToCart, cart }) => {
 
   function bookExistOnCart(){
     return cart.find(book => +book.id === +id)
+  }
+
+  function scrollToTop() {
+    scroll.scrollToTop({duration: 0});
   }
 
   return (
@@ -63,7 +68,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
                   </p>
                 </div>
                 {bookExistOnCart() ? (
-                  <Link to={"/cart"} className="book__link" >
+                  <Link to={"/cart"} className="book__link" onClick={scrollToTop} >
                     <button className="btn" title="title" >Checkout</button>
                   </Link>
                 ) : (

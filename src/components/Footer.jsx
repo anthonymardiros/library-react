@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../assets/Library.svg';
 import { Link } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
     return(
@@ -13,10 +14,16 @@ const Footer = () => {
                         </figure>
                     </Link>
                     <div className="footer__list">
-                        <Link to="/" className='footer__link'>Home</Link>
+                        <Link to="/" className='footer__link' onClick={() => {
+                            scroll.scrollToTop({ duration: 20 });
+                        }}>Home</Link>
                         <span className='footer__link no-cursor'>About</span>
-                        <Link to="/books" className='footer__link'>Books</Link>
-                        <Link to="/cart" className='footer__link'>Cart</Link>
+                        <Link to="/books" className='footer__link' onClick={() => {
+                            scroll.scrollToTop({ duration: 20 });
+                        }}>Books</Link>
+                        <Link to="/cart" className='footer__link' onClick={() => {
+                            scroll.scrollToTop({ duration: 20 });
+                        }}>Cart</Link>
                     </div>
                     <div className="footer__copyright">
                         Copyright &copy; 2023

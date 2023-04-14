@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import Price from "./Price";
 import Rating from "./Rating";
+import { animateScroll as scroll } from 'react-scroll';
 
 const Book = ({ book }) => {
   const [img, setImg] = useState()
@@ -23,12 +24,16 @@ const Book = ({ book }) => {
     }
   })
 
+  function scrollToTop() {
+    scroll.scrollToTop({duration: 0});
+  }
+
   return (
     <div className="book">
       {
         img ?
         <>
-          <Link to={`/books/${book.id}`}>
+          <Link to={`/books/${book.id}`} onClick={ scrollToTop } >
             <figure className="book__img--wrapper">
               <img src={img.src} alt="" className="book__img"/>
             </figure>

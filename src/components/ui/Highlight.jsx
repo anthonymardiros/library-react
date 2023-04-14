@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const Highlight = ({ icon, title, para }) => {
-    return(
-        <div className="highlight">
-            <div className="highlight__img">
-                {icon}
-            </div>
-            <h3 className="highlight__subtitle">{title}</h3>
-            <p className="hightlight__para hightlight__para--row">{para}</p>
-        </div>
-    )
-}
+  return (
+    <div className="highlight">
+      <div className="highlight__img">{icon}</div>
+      <h3 className="highlight__subtitle">{title}</h3>
+      <p className="highlight__para highlight__para--row">{para}</p>
+    </div>
+  );
+};
 
 export default Highlight;
