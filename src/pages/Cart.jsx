@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EmptyCart from "../assets/empty_cart.svg"
+import { animateScroll as scroll } from 'react-scroll';
 
 const Cart = ({ cart, changeQuantity, removeItem }) => {
   const total = () => {
@@ -74,7 +75,9 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                     <div className="cart__empty">
                         <img src={EmptyCart} alt="" className="cart__empty--img" />
                         <h2>You don't have any books in your cart!</h2>
-                        <Link to="/books">
+                        <Link to="/books" onClick={() => {
+                            scroll.scrollToTop({ duration: 20 });
+                        }}>
                         <button className="btn">Browse Books</button>
                         </Link>
                     </div>

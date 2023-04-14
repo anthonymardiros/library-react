@@ -1,6 +1,7 @@
 import React from "react";
 import undrawBooks from "../assets/Undraw_Books.svg";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from 'react-scroll';
 
 const Landing = () => {
   return (
@@ -14,7 +15,9 @@ const Landing = () => {
             <h2>
               Find your dream book with <div className="purple">Library</div>
             </h2>
-            <Link to="/books">
+            <Link to="/books" onClick={() => {
+                            scroll.scrollToTop({ duration: 20 });
+                        }}>
               <button className="btn">Browse books</button>
             </Link>
           </div>

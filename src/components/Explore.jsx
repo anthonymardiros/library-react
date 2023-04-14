@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Explore = () => {
     return(
@@ -9,7 +10,9 @@ const Explore = () => {
                     <h2>
                         Explore more <span className="purple">Books</span>
                     </h2>
-                    <Link to="/books">
+                    <Link to="/books" onClick={() => {
+                            scroll.scrollToTop({ duration: 20 });
+                        }}>
                         <button className="btn">Explore Books</button>
                     </Link>
                 </div>

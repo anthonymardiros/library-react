@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LibraryLogo from '../assets/Library.svg';
 import { Link } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Nav = ({ numberOfItems }) => {
     function openMenu(){
@@ -20,7 +21,7 @@ const Nav = ({ numberOfItems }) => {
             </Link>
             <ul className="nav__links">
                 <li className="nav__list">
-                    <Link to="/" className="nav__link" onClick={handleLinkClick}>
+                    <Link to="/" className="nav__link" onClick={handleLinkClick} >
                         Home
                     </Link>
                 </li>
