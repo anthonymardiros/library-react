@@ -40,6 +40,10 @@ function App() {
     });
     return counter;
   }
+  
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
 
   useEffect(() => {
     console.log(cart);
