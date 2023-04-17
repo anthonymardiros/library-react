@@ -20,7 +20,7 @@ const Nav = ({ numberOfItems }) => {
             </Link>
             <ul className="nav__links">
                 <li className="nav__list">
-                    <Link to="/" className="nav__link" onClick={handleLinkClick} >
+                    <Link to="/" className="nav__link nav__link--home" onClick={handleLinkClick} >
                         Home
                     </Link>
                 </li>

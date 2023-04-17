@@ -114,6 +114,10 @@ button:active {
   color: #7342d6;
 }
 
+.nav__link--home {
+  transform: translateX(10px);
+}
+
 .nav__list {
   margin-left: 16px;
   display: flex;
